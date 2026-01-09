@@ -44,3 +44,7 @@ This is a React + TypeScript blog website built with Vite.
 **Styling**: Plain CSS with dark/light mode support via `data-theme` attribute on the document element. Component styles use BEM-like naming (e.g., `.blog-post-title`, `.btn-primary`).
 
 **Dev Page**: The `/dev` route serves as a component showcase/playground for developing and testing UI components in isolation.
+
+## Conventions
+
+- When making new page components, always add a link to that page in the header navigation (`src/App.tsx`).
