@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface BlogPostProps {
   id: number;
   title: string;
@@ -6,7 +8,7 @@ interface BlogPostProps {
   author: string;
 }
 
-export function BlogPost({ title, excerpt, date, author }: BlogPostProps) {
+export function BlogPost({ id, title, excerpt, date, author }: BlogPostProps) {
   return (
     <article className="blog-post">
       <h2 className="blog-post-title">{title}</h2>
@@ -15,7 +17,7 @@ export function BlogPost({ title, excerpt, date, author }: BlogPostProps) {
         <span className="blog-post-author">by {author}</span>
       </div>
       <p className="blog-post-excerpt">{excerpt}</p>
-      <button className="blog-post-read-more">Read More</button>
+      <Link to={`/blog/${id}`} className="blog-post-read-more">Read More</Link>
     </article>
   );
 }
