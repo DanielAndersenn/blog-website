@@ -1,0 +1,281 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: #646cff;
+  color: white;
+}
+
+/* Blog Page */
+.blog-page {
+  padding-bottom: 2rem;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.blog-header p {
+  color: #888;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Blog Post Component */
+.blog-post {
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.blog-post-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.blog-post-meta {
+  display: flex;
+  gap: 1rem;
+  color: #888;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post-excerpt {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.blog-post-read-more {
+  background: transparent;
+  border: 1px solid #646cff;
+  color: #646cff;
+}
+
+.blog-post-read-more:hover {
+  background: #646cff;
+  color: white;
+}
+
+/* Dev Page */
+.dev-page {
+  padding-bottom: 2rem;
+}
+
+.dev-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dev-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.dev-header p {
+  color: #888;
+}
+
+.dev-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Component Showcase */
+.component-showcase {
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.component-showcase h2 {
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #444;
+  font-size: 1.25rem;
+  color: #646cff;
+}
+
+.component-demo {
+  padding: 1rem 0;
+}
+
+.component-variants {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.component-variants h4 {
+  margin: 0 0 0.5rem 0;
+  color: #aaa;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Button Component */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #646cff;
+  color: white;
+  border: 1px solid #646cff;
+}
+
+.btn-primary:hover {
+  background: #535bf2;
+  border-color: #535bf2;
+}
+
+.btn-secondary {
+  background: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+.btn-secondary:hover {
+  background: #444;
+  border-color: #444;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #646cff;
+  border: 1px solid #646cff;
+}
+
+.btn-outline:hover {
+  background: rgba(100, 108, 255, 0.1);
+}
+
+.btn-small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-medium {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.btn-large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* Card Component */
+.card {
+  padding: 1.25rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.card-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+}
+
+.card-content {
+  color: #ccc;
+}
+
+.card-content p {
+  margin: 0 0 0.75rem 0;
+}
+
+.card-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  .nav {
+    border-bottom-color: #ddd;
+  }
+
+  .blog-post,
+  .component-showcase {
+    border-color: #ddd;
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .component-showcase h2 {
+    border-bottom-color: #ddd;
+  }
+
+  .btn-secondary {
+    background: #eee;
+    color: #333;
+    border-color: #ddd;
+  }
+
+  .btn-secondary:hover {
+    background: #ddd;
+  }
+
+  .card {
+    border-color: #ddd;
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .card-content {
+    color: #555;
+  }
+}
